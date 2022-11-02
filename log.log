@@ -1,34 +1,941 @@
-2022-11-01 22:28:45.722  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
-2022-11-01 22:28:45.726  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
-2022-11-01 22:28:45.807  INFO 38183 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-11-01 22:28:45.807  INFO 38183 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-11-01 22:28:47.357  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-11-01 22:28:47.376  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
-2022-11-01 22:28:48.195  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-11-01 22:28:48.213  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-11-01 22:28:48.214  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-11-01 22:28:48.377  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-11-01 22:28:48.377  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2569 ms
-2022-11-01 22:28:48.633  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-11-01 22:28:48.731  INFO 38183 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-11-01 22:28:48.958  INFO 38183 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-11-01 22:28:49.098  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-11-01 22:28:49.470  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-11-01 22:28:49.492  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-11-01 22:28:50.028  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-11-01 22:28:50.044  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-11-01 22:28:50.132  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-11-01 22:28:50.295 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2022-11-01 22:28:50.401 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
-2022-11-01 22:28:50.429 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2022-11-01 22:28:50.454 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2022-11-01 22:28:50.619  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-11-02 00:01:35.775  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-11-02 00:01:35.851  INFO 38183 --- [Thread-59] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:01:35.920  INFO 38183 --- [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:01:35.927  INFO 38183 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2022-11-02 00:01:35.932  INFO 38183 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2022-11-02 00:01:36.476  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:01:36.476  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:01:36.871  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:01:36.872  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:01:37.119  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:01:37.120  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:01:37.121  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:01:37.134  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:01:37.134  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 655 ms
+2022-11-02 00:01:37.212  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:01:37.219  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2022-11-02 00:01:37.229  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2022-11-02 00:01:37.230  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:01:37.295  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:01:37.296  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:01:37.359  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:01:37.504 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:01:37.523 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:01:37.535 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:01:37.545 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:01:37.610  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: c9d99c13-b970-4bd5-b9cb-0708aa9fece2
+Using generated security password: 031cd919-4c40-4fb1-9f03-f7ac3ff91cd2
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2022-11-01 22:28:50.772  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22b6918e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64e20548, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c8ba56e, org.springframework.security.web.header.HeaderWriterFilter@74636880, org.springframework.security.web.csrf.CsrfFilter@22630340, org.springframework.security.web.authentication.logout.LogoutFilter@19744ff5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f93bbe7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@532e0b00, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@67218a4c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@72069292, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10d01208, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54e436a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b04cf92, org.springframework.security.web.session.SessionManagementFilter@9bd93f7, org.springframework.security.web.access.ExceptionTranslationFilter@255ded41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@317d7a1d]
-2022-11-01 22:28:50.853  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-11-01 22:28:50.953  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-11-01 22:28:50.970  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 5.823 seconds (JVM running for 7.007)
+2022-11-02 00:01:37.634  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b4c9f2d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75e25ca, org.springframework.security.web.context.SecurityContextPersistenceFilter@73934dc2, org.springframework.security.web.header.HeaderWriterFilter@6f36d701, org.springframework.security.web.csrf.CsrfFilter@4bd8244, org.springframework.security.web.authentication.logout.LogoutFilter@5d0f706e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@333e0d30, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5fcabd13, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@44caef9c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@75fcc96e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fea8a0a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66bdcc29, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@576ee9d2, org.springframework.security.web.session.SessionManagementFilter@1bd4435e, org.springframework.security.web.access.ExceptionTranslationFilter@76d75c56, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f72798f]
+2022-11-02 00:01:37.669  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:01:37.686  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:01:37.701  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.482 seconds (JVM running for 5573.422)
+2022-11-02 00:01:37.704  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:01:55.240  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 00:01:55.247  INFO 38183 --- [Thread-63] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:01:55.253  INFO 38183 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:01:55.254  INFO 38183 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2022-11-02 00:01:55.260  INFO 38183 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2022-11-02 00:01:55.399  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:01:55.400  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:01:55.769  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:01:55.770  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:01:55.941  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:01:55.945  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:01:55.945  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:01:55.963  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:01:55.963  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 560 ms
+2022-11-02 00:01:56.006  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:01:56.015  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2022-11-02 00:01:56.114  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2022-11-02 00:01:56.114  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:01:56.183  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:01:56.183  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:01:56.224  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:01:56.301 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:01:56.322 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:01:56.337 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:01:56.350 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:01:56.401  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1298a5f0-5e23-440c-bf7f-0ea4136bed21
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:01:56.425  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@73ce6c2d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@712f672f, org.springframework.security.web.context.SecurityContextPersistenceFilter@24d5c215, org.springframework.security.web.header.HeaderWriterFilter@6cf5798e, org.springframework.security.web.csrf.CsrfFilter@53d8104a, org.springframework.security.web.authentication.logout.LogoutFilter@57c88efb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3031e3d1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@626d92ab, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4ebf2db0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5138dd2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74a97f91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33d75183, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@575b54a8, org.springframework.security.web.session.SessionManagementFilter@379cdeec, org.springframework.security.web.access.ExceptionTranslationFilter@72c44d0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a970e9d]
+2022-11-02 00:01:56.449  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:01:56.465  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:01:56.479  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.131 seconds (JVM running for 5592.199)
+2022-11-02 00:01:56.481  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:14:27.571  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-11-02 00:14:27.584  INFO 38183 --- [Thread-67] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:14:27.607  INFO 38183 --- [Thread-67] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:14:27.609  INFO 38183 --- [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2022-11-02 00:14:27.627  INFO 38183 --- [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2022-11-02 00:14:27.915  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:14:27.915  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:14:28.315  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:14:28.316  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:14:28.592  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:14:28.593  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:14:28.593  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:14:28.608  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:14:28.608  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 690 ms
+2022-11-02 00:14:28.661  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:14:28.669  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2022-11-02 00:14:28.689  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2022-11-02 00:14:28.690  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:14:28.750  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:14:28.750  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:14:28.777  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:14:28.874 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:14:28.892 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:14:28.906 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:14:28.919 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:14:28.973  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 16dca142-5c64-4a24-947f-f065c051443c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:14:29.004  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e8024c4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46bdc915, org.springframework.security.web.context.SecurityContextPersistenceFilter@2992ed8c, org.springframework.security.web.header.HeaderWriterFilter@763095c7, org.springframework.security.web.csrf.CsrfFilter@c045d11, org.springframework.security.web.authentication.logout.LogoutFilter@55253b77, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@50e33eb9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2e8b1bde, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@fe2318d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2981e624, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d13070f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f7f2fc7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29745693, org.springframework.security.web.session.SessionManagementFilter@7d0d4b2, org.springframework.security.web.access.ExceptionTranslationFilter@7260d2bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@423b43d2]
+2022-11-02 00:14:29.027  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:14:29.048  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:14:29.057  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.327 seconds (JVM running for 6344.755)
+2022-11-02 00:14:29.067  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:14:46.583  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 00:14:46.592  INFO 38183 --- [Thread-71] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:14:46.601  INFO 38183 --- [Thread-71] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:14:46.602  INFO 38183 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2022-11-02 00:14:46.609  INFO 38183 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2022-11-02 00:14:46.714  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:14:46.715  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:14:46.977  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:14:46.978  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:14:47.108  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:14:47.109  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:14:47.110  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:14:47.124  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:14:47.124  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 404 ms
+2022-11-02 00:14:47.170  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:14:47.177  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2022-11-02 00:14:47.183  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2022-11-02 00:14:47.184  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:14:47.246  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:14:47.247  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:14:47.276  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:14:47.335 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:14:47.368 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:14:47.389 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:14:47.400 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:14:47.547  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e62b92f0-1dd4-48bf-8dd0-4d95e39c49a9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:14:47.566  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f5405bd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a42e523, org.springframework.security.web.context.SecurityContextPersistenceFilter@24a31fdc, org.springframework.security.web.header.HeaderWriterFilter@278c4754, org.springframework.security.web.csrf.CsrfFilter@7c21bc22, org.springframework.security.web.authentication.logout.LogoutFilter@46da4f99, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4aff0229, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@79a7c797, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@281e5208, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1f5600ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7acf2a13, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f3c64f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7626cce, org.springframework.security.web.session.SessionManagementFilter@559269e0, org.springframework.security.web.access.ExceptionTranslationFilter@3cac43d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f174094]
+2022-11-02 00:14:47.584  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:14:47.600  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:14:47.618  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.932 seconds (JVM running for 6363.314)
+2022-11-02 00:14:47.622  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:15:00.109  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 00:15:00.118  INFO 38183 --- [Thread-75] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:15:00.128  INFO 38183 --- [Thread-75] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:15:00.129  INFO 38183 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2022-11-02 00:15:00.133  INFO 38183 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2022-11-02 00:15:00.303  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:15:00.303  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:15:00.571  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:15:00.573  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:15:00.805  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:15:00.808  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:15:00.809  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:15:00.828  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:15:00.828  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 523 ms
+2022-11-02 00:15:00.914  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:15:00.931  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2022-11-02 00:15:00.965  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2022-11-02 00:15:00.966  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:15:01.003  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:15:01.003  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:15:01.044  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:15:01.139 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:15:01.167 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:15:01.183 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:15:01.194 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:15:01.489  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8c769812-a880-404b-85ae-d6f7e00946f8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:15:01.517  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2436aeca, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12151e5e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e191a83, org.springframework.security.web.header.HeaderWriterFilter@2044ed3b, org.springframework.security.web.csrf.CsrfFilter@7c21415a, org.springframework.security.web.authentication.logout.LogoutFilter@669689ab, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6c983d8e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@c56d412, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3fcc25df, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@850de08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@461f4f14, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41355fd9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31620cb0, org.springframework.security.web.session.SessionManagementFilter@6844ad40, org.springframework.security.web.access.ExceptionTranslationFilter@3f1ce85c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57dc2923]
+2022-11-02 00:15:01.543  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:15:01.581  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:15:01.599  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.394 seconds (JVM running for 6377.363)
+2022-11-02 00:15:01.602  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:16:59.867  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 00:16:59.871  INFO 38183 --- [Thread-79] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:16:59.880  INFO 38183 --- [Thread-79] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:16:59.882  INFO 38183 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2022-11-02 00:16:59.888  INFO 38183 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2022-11-02 00:17:00.133  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:17:00.134  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:17:00.299  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:17:00.300  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:17:00.453  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:17:00.454  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:17:00.455  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:17:00.474  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:17:00.474  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 338 ms
+2022-11-02 00:17:00.519  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:17:00.525  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
+2022-11-02 00:17:00.536  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
+2022-11-02 00:17:00.537  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:17:00.598  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:17:00.598  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:17:00.626  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:17:00.676 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:17:00.692 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:17:00.702 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:17:00.711 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:17:00.752  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2e5f4232-c92b-49d8-8df5-d42969a8b759
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:17:00.768  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a442274, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e15d800, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a7887c, org.springframework.security.web.header.HeaderWriterFilter@7fb7788e, org.springframework.security.web.csrf.CsrfFilter@1c436278, org.springframework.security.web.authentication.logout.LogoutFilter@16e854bb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e8f4dd4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7bccb4c3, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3a70c3fb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@24d7799c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3add4e11, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e6a22cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@257446b0, org.springframework.security.web.session.SessionManagementFilter@6f07a78, org.springframework.security.web.access.ExceptionTranslationFilter@647bf75e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c911a96]
+2022-11-02 00:17:00.787  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:17:00.801  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:17:00.812  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.841 seconds (JVM running for 6496.574)
+2022-11-02 00:17:00.816  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:17:59.602  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2022-11-02 00:17:59.608  INFO 38183 --- [Thread-83] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:17:59.618  INFO 38183 --- [Thread-83] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:17:59.618  INFO 38183 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2022-11-02 00:17:59.624  INFO 38183 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+2022-11-02 00:17:59.790  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:17:59.790  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:18:00.081  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:18:00.084  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:18:00.269  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:18:00.271  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:18:00.271  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:18:00.292  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:18:00.292  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 499 ms
+2022-11-02 00:18:00.346  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:18:00.362  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2022-11-02 00:18:00.368  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2022-11-02 00:18:00.368  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:18:00.450  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:18:00.450  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:18:00.481  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:18:00.559 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:18:00.597 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:18:00.634 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:18:00.669 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:18:00.750  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8cf19b57-a525-45c9-9551-aa959c74e938
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:18:00.781  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@784f4196, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e0c2136, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e2864d6, org.springframework.security.web.header.HeaderWriterFilter@352f6183, org.springframework.security.web.csrf.CsrfFilter@9e8bcf5, org.springframework.security.web.authentication.logout.LogoutFilter@edfb265, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@32d12ebf, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@14e66315, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@593549e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@33a78df2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13c29df5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d2fd577, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ad481c3, org.springframework.security.web.session.SessionManagementFilter@126b6d7a, org.springframework.security.web.access.ExceptionTranslationFilter@1f4a5da3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d9372c3]
+2022-11-02 00:18:00.809  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:18:00.835  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:18:00.853  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.108 seconds (JVM running for 6556.615)
+2022-11-02 00:18:00.856  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:18:52.613  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-11-02 00:18:52.624  INFO 38183 --- [Thread-87] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:18:52.633  INFO 38183 --- [Thread-87] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:18:52.634  INFO 38183 --- [Thread-87] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2022-11-02 00:18:52.640  INFO 38183 --- [Thread-87] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
+2022-11-02 00:18:52.845  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:18:52.846  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:18:53.166  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:18:53.167  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:18:53.314  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:18:53.316  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:18:53.316  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:18:53.335  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:18:53.335  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 484 ms
+2022-11-02 00:18:53.387  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:18:53.392  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
+2022-11-02 00:18:53.400  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
+2022-11-02 00:18:53.400  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:18:53.431  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:18:53.431  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:18:53.475  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:18:53.591 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:18:53.611 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:18:53.629 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:18:53.644 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:18:53.718  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e0bb4090-6af4-4da2-a165-a10443dd013d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:18:53.738  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@213694cd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f55e542, org.springframework.security.web.context.SecurityContextPersistenceFilter@6956db50, org.springframework.security.web.header.HeaderWriterFilter@343358ea, org.springframework.security.web.csrf.CsrfFilter@628a920f, org.springframework.security.web.authentication.logout.LogoutFilter@49125647, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45ec0a4c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@560a34af, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@a4e348e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2a6bdf22, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7626c5ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@587c378a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ea8782a, org.springframework.security.web.session.SessionManagementFilter@5ffa304a, org.springframework.security.web.access.ExceptionTranslationFilter@4e0a2caa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6aec8021]
+2022-11-02 00:18:53.759  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:18:53.776  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:18:53.784  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.995 seconds (JVM running for 6609.546)
+2022-11-02 00:18:53.788  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:19:55.672  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2022-11-02 00:19:55.678  INFO 38183 --- [Thread-91] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:19:55.684  INFO 38183 --- [Thread-91] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:19:55.684  INFO 38183 --- [Thread-91] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
+2022-11-02 00:19:55.689  INFO 38183 --- [Thread-91] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
+2022-11-02 00:19:55.989  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:19:55.990  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:19:56.234  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:19:56.236  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:19:56.522  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:19:56.523  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:19:56.523  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:19:56.541  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:19:56.541  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 548 ms
+2022-11-02 00:19:56.611  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:19:56.616  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Starting...
+2022-11-02 00:19:56.623  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Start completed.
+2022-11-02 00:19:56.624  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:19:56.689  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:19:56.689  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:19:56.720  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:19:56.792 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:19:56.833 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:19:56.854 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:19:56.870 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:19:56.941  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 28a25969-f9c2-46a8-9c9e-9230d0e63e25
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:19:56.964  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@13d751e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f2a06af, org.springframework.security.web.context.SecurityContextPersistenceFilter@77339b4f, org.springframework.security.web.header.HeaderWriterFilter@5ebaa1b3, org.springframework.security.web.csrf.CsrfFilter@377cb9d1, org.springframework.security.web.authentication.logout.LogoutFilter@30d66863, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@245e37c4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@279f3b16, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2a1fee99, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4bf83dfb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@112db34a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a113fe5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@208219c4, org.springframework.security.web.session.SessionManagementFilter@25d30c15, org.springframework.security.web.access.ExceptionTranslationFilter@2bc9a62d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bb6e4e6]
+2022-11-02 00:19:56.995  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:19:57.015  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:19:57.023  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.217 seconds (JVM running for 6672.784)
+2022-11-02 00:19:57.027  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:19:58.427  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2022-11-02 00:19:58.462  INFO 38183 --- [Thread-95] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:19:58.502  INFO 38183 --- [Thread-95] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:19:58.503  INFO 38183 --- [Thread-95] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2022-11-02 00:19:58.508  INFO 38183 --- [Thread-95] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+2022-11-02 00:19:58.678  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:19:58.678  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:19:58.941  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:19:58.942  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:19:59.138  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:19:59.139  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:19:59.139  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:19:59.156  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:19:59.157  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 476 ms
+2022-11-02 00:19:59.215  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:19:59.223  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Starting...
+2022-11-02 00:19:59.230  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Start completed.
+2022-11-02 00:19:59.231  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:19:59.261  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:19:59.261  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:19:59.295  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:19:59.369 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:19:59.399 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:19:59.412 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:19:59.425 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:19:59.509  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3e71858b-c94e-4730-ad2b-dcdd999e036b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:19:59.537  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@62361247, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b50ec80, org.springframework.security.web.context.SecurityContextPersistenceFilter@8b5f983, org.springframework.security.web.header.HeaderWriterFilter@e4d7b2f, org.springframework.security.web.csrf.CsrfFilter@599e7a28, org.springframework.security.web.authentication.logout.LogoutFilter@762efff5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e168dfa, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4c73888f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@41d3df4d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3ee14f84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fb24586, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ac3d35c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75fa259c, org.springframework.security.web.session.SessionManagementFilter@225088db, org.springframework.security.web.access.ExceptionTranslationFilter@4969dd3e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50d12dcc]
+2022-11-02 00:19:59.570  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:19:59.602  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:19:59.611  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.965 seconds (JVM running for 6675.372)
+2022-11-02 00:19:59.613  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:20:26.192  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2022-11-02 00:20:26.200  INFO 38183 --- [Thread-99] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:20:26.212  INFO 38183 --- [Thread-99] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:20:26.213  INFO 38183 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown initiated...
+2022-11-02 00:20:26.224  INFO 38183 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown completed.
+2022-11-02 00:20:26.368  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 00:20:26.369  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:20:26.608  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 00:20:26.609  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 00:20:26.721  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:20:26.722  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:20:26.722  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:20:26.736  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:20:26.736  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 362 ms
+2022-11-02 00:20:26.779  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 00:20:26.784  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Starting...
+2022-11-02 00:20:26.788  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Start completed.
+2022-11-02 00:20:26.789  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 00:20:26.830  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 00:20:26.830  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 00:20:26.855  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 00:20:26.899 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 00:20:26.917 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 00:20:26.927 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 00:20:26.936 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 00:20:26.977  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ae9992dc-6826-4d21-b17e-de07ef9f1962
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 00:20:26.993  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d324dac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a88f0a3, org.springframework.security.web.context.SecurityContextPersistenceFilter@649b0158, org.springframework.security.web.header.HeaderWriterFilter@5e711ecf, org.springframework.security.web.csrf.CsrfFilter@1bdbd4ce, org.springframework.security.web.authentication.logout.LogoutFilter@2486450b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@22d910ca, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2ee3721e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@30bdf478, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@9668b5c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@474e2607, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@111fdf47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d3cb558, org.springframework.security.web.session.SessionManagementFilter@2123dc16, org.springframework.security.web.access.ExceptionTranslationFilter@55dec501, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@be59f06]
+2022-11-02 00:20:27.019  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:20:27.043  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:20:27.056  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.727 seconds (JVM running for 6702.817)
+2022-11-02 00:20:27.059  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:36:00.154  WARN 38183 --- [HikariPool-26 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Thread starvation or clock leap detected (housekeeper delta=10m33s29ms).
+2022-11-02 01:17:17.753  WARN 38183 --- [HikariPool-26 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Thread starvation or clock leap detected (housekeeper delta=3m17s235ms).
+2022-11-02 08:46:06.957  WARN 38183 --- [HikariPool-26 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Thread starvation or clock leap detected (housekeeper delta=6h39m48s673ms).
+2022-11-02 08:51:06.295  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-11-02 08:51:06.397  INFO 38183 --- [Thread-103] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 08:51:06.494  INFO 38183 --- [Thread-103] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 08:51:06.500  INFO 38183 --- [Thread-103] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown initiated...
+2022-11-02 08:51:06.524  INFO 38183 --- [Thread-103] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown completed.
+2022-11-02 08:51:07.454  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 08:51:07.458  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 08:51:08.197  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 08:51:08.198  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-11-02 08:51:08.522  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 08:51:08.523  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 08:51:08.523  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 08:51:08.551  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 08:51:08.551  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1086 ms
+2022-11-02 08:51:08.721  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 08:51:08.745  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Starting...
+2022-11-02 08:51:09.059  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Start completed.
+2022-11-02 08:51:09.060  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 08:51:09.392  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 08:51:09.393  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 08:51:09.433  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 08:51:09.501 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 08:51:09.527 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 08:51:09.549 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 08:51:09.563 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 08:51:09.662  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d15735f4-e465-47ee-b4a2-d62cf7e33978
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 08:51:09.718  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14fb0285, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@356dc3bf, org.springframework.security.web.context.SecurityContextPersistenceFilter@69330664, org.springframework.security.web.header.HeaderWriterFilter@a8143b5, org.springframework.security.web.csrf.CsrfFilter@7f82a36d, org.springframework.security.web.authentication.logout.LogoutFilter@59d9a5f3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@52a8c4d0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4b27367b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@21f70f86, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3eef692b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4adfb088, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ac3ce8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64149ca2, org.springframework.security.web.session.SessionManagementFilter@34054aa, org.springframework.security.web.access.ExceptionTranslationFilter@57ee942e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e51fcd1]
+2022-11-02 08:51:09.762  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 08:51:09.786  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 08:51:09.795  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 2.636 seconds (JVM running for 12620.798)
+2022-11-02 08:51:09.800  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 08:59:14.126  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 08:59:14.268  INFO 38183 --- [Thread-107] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 08:59:14.312  INFO 38183 --- [Thread-107] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 08:59:14.318  INFO 38183 --- [Thread-107] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown initiated...
+2022-11-02 08:59:14.328  INFO 38183 --- [Thread-107] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown completed.
+2022-11-02 08:59:14.886  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 08:59:14.887  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 08:59:15.307  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 08:59:15.308  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 08:59:15.460  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 08:59:15.461  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 08:59:15.461  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 08:59:15.477  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 08:59:15.478  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 588 ms
+2022-11-02 08:59:15.543  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 08:59:15.553  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Starting...
+2022-11-02 08:59:15.653  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Start completed.
+2022-11-02 08:59:15.654  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 08:59:15.740  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 08:59:15.741  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 08:59:15.782  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 08:59:15.855 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 08:59:15.869 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 08:59:15.878 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 08:59:15.886 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 08:59:15.945  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 39e80503-77be-41f1-890a-960f65b8e83a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 08:59:15.965  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30087347, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@139df04c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d59f272, org.springframework.security.web.header.HeaderWriterFilter@305142d, org.springframework.security.web.csrf.CsrfFilter@42b761f, org.springframework.security.web.authentication.logout.LogoutFilter@597830ab, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@27aab7b4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@50436dda, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6178e29c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2722f466, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5681af35, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d0e7db4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51c9ab11, org.springframework.security.web.session.SessionManagementFilter@429dffb0, org.springframework.security.web.access.ExceptionTranslationFilter@3dbed5b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58ef6b29]
+2022-11-02 08:59:15.983  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 08:59:15.999  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 08:59:16.011  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.306 seconds (JVM running for 13107.005)
+2022-11-02 08:59:16.014  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:04:08.774  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:04:08.790  INFO 38183 --- [Thread-111] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:04:08.802  INFO 38183 --- [Thread-111] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:04:08.803  INFO 38183 --- [Thread-111] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown initiated...
+2022-11-02 09:04:08.811  INFO 38183 --- [Thread-111] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown completed.
+2022-11-02 09:04:09.112  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:04:09.112  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:04:09.527  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:04:09.528  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:04:09.737  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:04:09.738  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:04:09.738  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:04:09.753  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:04:09.753  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 637 ms
+2022-11-02 09:04:09.798  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:04:09.803  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Starting...
+2022-11-02 09:04:09.809  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Start completed.
+2022-11-02 09:04:09.809  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:04:09.879  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:04:09.884  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:04:09.909  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:04:09.968 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:04:10.000 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:04:10.016 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:04:10.030 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:04:10.104  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 18a2e861-5656-45dc-bdca-efc7d941a26b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:04:10.123  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68c7078b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@612a903c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c145958, org.springframework.security.web.header.HeaderWriterFilter@524ac2a3, org.springframework.security.web.csrf.CsrfFilter@7a4f760c, org.springframework.security.web.authentication.logout.LogoutFilter@5d87fa53, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@17ade91b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@26839b42, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@19374833, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3a833809, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a65f88c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e3e68b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ad7686c, org.springframework.security.web.session.SessionManagementFilter@5d6aabef, org.springframework.security.web.access.ExceptionTranslationFilter@112cf57b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e52f6d1]
+2022-11-02 09:04:10.142  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:04:10.156  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:04:10.165  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.238 seconds (JVM running for 13401.08)
+2022-11-02 09:04:10.168  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:04:41.775  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-11-02 09:04:41.784  INFO 38183 --- [Thread-115] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:04:41.800  INFO 38183 --- [Thread-115] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:04:41.801  INFO 38183 --- [Thread-115] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown initiated...
+2022-11-02 09:04:41.806  INFO 38183 --- [Thread-115] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown completed.
+2022-11-02 09:04:41.915  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:04:41.915  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:04:42.286  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:04:42.287  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:04:42.426  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:04:42.427  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:04:42.429  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:04:42.447  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:04:42.447  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 530 ms
+2022-11-02 09:04:42.504  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:04:42.519  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Starting...
+2022-11-02 09:04:42.527  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Start completed.
+2022-11-02 09:04:42.527  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:04:42.592  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:04:42.592  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:04:42.625  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:04:42.696 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:04:42.719 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:04:42.733 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:04:42.745 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:04:42.811  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c2a6d632-cca0-454f-ab09-b6f633bef576
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:04:42.828  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@545b3f5c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b2ef7ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@3f19df8, org.springframework.security.web.header.HeaderWriterFilter@6a900876, org.springframework.security.web.csrf.CsrfFilter@5c8a62a7, org.springframework.security.web.authentication.logout.LogoutFilter@92d8e2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6cba9260, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7afeb69a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@533f5168, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@61df0553, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16ec6c9b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c550588, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ad323c1, org.springframework.security.web.session.SessionManagementFilter@c615989, org.springframework.security.web.access.ExceptionTranslationFilter@2bc7d9e4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@478f18b0]
+2022-11-02 09:04:42.847  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:04:42.862  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:04:42.869  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.982 seconds (JVM running for 13433.783)
+2022-11-02 09:04:42.874  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:06:10.932  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:06:10.941  INFO 38183 --- [Thread-119] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:06:10.953  INFO 38183 --- [Thread-119] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:06:10.954  INFO 38183 --- [Thread-119] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown initiated...
+2022-11-02 09:06:10.960  INFO 38183 --- [Thread-119] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown completed.
+2022-11-02 09:06:11.346  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:06:11.346  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:06:11.708  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:06:11.709  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:06:11.853  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:06:11.854  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:06:11.854  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:06:11.874  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:06:11.874  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 525 ms
+2022-11-02 09:06:11.932  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:06:11.940  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Starting...
+2022-11-02 09:06:11.950  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Start completed.
+2022-11-02 09:06:11.951  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:06:12.020  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:06:12.020  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:06:12.047  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:06:12.088 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:06:12.104 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:06:12.116 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:06:12.127 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:06:12.174  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b1390443-de97-4997-86d2-a9b5d3575087
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:06:12.189  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12e752d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33bad9c4, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d6f3954, org.springframework.security.web.header.HeaderWriterFilter@26a0ecaa, org.springframework.security.web.csrf.CsrfFilter@962954, org.springframework.security.web.authentication.logout.LogoutFilter@38737ce4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@52b55c8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2559f949, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6c605f6e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2efb6f5e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1bc85b5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a2c3130, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19145c23, org.springframework.security.web.session.SessionManagementFilter@c027d09, org.springframework.security.web.access.ExceptionTranslationFilter@1da774c2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@dd5853e]
+2022-11-02 09:06:12.205  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:06:12.219  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:06:12.229  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.07 seconds (JVM running for 13523.14)
+2022-11-02 09:06:12.233  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:06:24.698  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:06:24.705  INFO 38183 --- [Thread-123] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:06:24.717  INFO 38183 --- [Thread-123] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:06:24.718  INFO 38183 --- [Thread-123] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown initiated...
+2022-11-02 09:06:24.723  INFO 38183 --- [Thread-123] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown completed.
+2022-11-02 09:06:24.861  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:06:24.862  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:06:25.183  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:06:25.186  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:06:25.383  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:06:25.384  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:06:25.386  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:06:25.415  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:06:25.415  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2022-11-02 09:06:25.504  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:06:25.516  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Starting...
+2022-11-02 09:06:25.524  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Start completed.
+2022-11-02 09:06:25.524  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:06:25.659  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:06:25.660  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:06:25.711  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:06:25.833 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:06:25.870 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:06:25.892 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:06:25.917 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:06:26.019  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5d782fca-dc13-4d8e-be87-502084ef92c3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:06:26.053  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5801cdc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5122d605, org.springframework.security.web.context.SecurityContextPersistenceFilter@ad8bd7a, org.springframework.security.web.header.HeaderWriterFilter@4091c6a9, org.springframework.security.web.csrf.CsrfFilter@edbdc0a, org.springframework.security.web.authentication.logout.LogoutFilter@4e8ac539, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1b82add5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@26f7e4fc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5f4025f1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@14764bda, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a61b8ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@648b8786, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79ce9d58, org.springframework.security.web.session.SessionManagementFilter@5ab311aa, org.springframework.security.web.access.ExceptionTranslationFilter@3cb38541, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43b9427f]
+2022-11-02 09:06:26.078  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:06:26.112  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:06:26.142  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.305 seconds (JVM running for 13537.054)
+2022-11-02 09:06:26.145  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:07:35.047  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2022-11-02 09:07:35.093  INFO 38183 --- [Thread-127] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:07:35.113  INFO 38183 --- [Thread-127] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:07:35.114  INFO 38183 --- [Thread-127] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2022-11-02 09:07:35.118  INFO 38183 --- [Thread-127] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.
+2022-11-02 09:07:35.261  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:07:35.262  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:07:35.676  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:07:35.677  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:07:35.818  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:07:35.819  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:07:35.819  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:07:35.833  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:07:35.833  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 569 ms
+2022-11-02 09:07:35.893  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:07:35.899  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Starting...
+2022-11-02 09:07:35.904  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Start completed.
+2022-11-02 09:07:35.905  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:07:35.927  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:07:35.927  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:07:35.954  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:07:36.009 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:07:36.031 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:07:36.053 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:07:36.072 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:07:36.150  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c1c8e59c-f4e2-4ec9-bb96-2dff30cafd2e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:07:36.192  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33ec02b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43a43b6a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b185b68, org.springframework.security.web.header.HeaderWriterFilter@15aa2636, org.springframework.security.web.csrf.CsrfFilter@27a64776, org.springframework.security.web.authentication.logout.LogoutFilter@772b1224, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3ece3d9a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3fddbe50, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@cc9fc69, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4027c74d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41cac36, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40c3a115, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@722a4f12, org.springframework.security.web.session.SessionManagementFilter@7e102e2b, org.springframework.security.web.access.ExceptionTranslationFilter@58e6f1ac, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a415f39]
+2022-11-02 09:07:36.213  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:07:36.229  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:07:36.240  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.024 seconds (JVM running for 13607.15)
+2022-11-02 09:07:36.248  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:07:57.774  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:07:57.781  INFO 38183 --- [Thread-131] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:07:57.792  INFO 38183 --- [Thread-131] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:07:57.792  INFO 38183 --- [Thread-131] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown initiated...
+2022-11-02 09:07:57.797  INFO 38183 --- [Thread-131] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown completed.
+2022-11-02 09:07:57.900  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:07:57.900  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:07:58.247  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:07:58.248  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:07:58.366  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:07:58.367  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:07:58.368  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:07:58.385  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:07:58.385  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 481 ms
+2022-11-02 09:07:58.426  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:07:58.431  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Starting...
+2022-11-02 09:07:58.436  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Start completed.
+2022-11-02 09:07:58.436  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:07:58.452  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:07:58.453  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:07:58.476  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:07:58.520 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:07:58.535 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:07:58.547 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:07:58.557 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:07:58.604  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b3cf5a75-1950-4e4f-975f-8fb311917cc5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:07:58.620  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ca77f34, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51a55064, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a928619, org.springframework.security.web.header.HeaderWriterFilter@748a8ae9, org.springframework.security.web.csrf.CsrfFilter@72b9c7af, org.springframework.security.web.authentication.logout.LogoutFilter@94a3a24, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f763135, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3040dd5d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2f242cfc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@15343030, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3aa8760, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23d7883e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ba53c98, org.springframework.security.web.session.SessionManagementFilter@462ab5cc, org.springframework.security.web.access.ExceptionTranslationFilter@ebeefe4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47175d11]
+2022-11-02 09:07:58.636  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:07:58.650  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:07:58.659  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.786 seconds (JVM running for 13629.568)
+2022-11-02 09:07:58.664  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:12:48.332  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:12:48.341  INFO 38183 --- [Thread-135] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:12:48.372  INFO 38183 --- [Thread-135] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:12:48.373  INFO 38183 --- [Thread-135] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown initiated...
+2022-11-02 09:12:48.399  INFO 38183 --- [Thread-135] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown completed.
+2022-11-02 09:12:48.739  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:12:48.740  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:12:49.055  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:12:49.056  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:12:49.242  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:12:49.243  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:12:49.243  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:12:49.256  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:12:49.257  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 515 ms
+2022-11-02 09:12:49.341  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:12:49.349  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Starting...
+2022-11-02 09:12:49.364  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Start completed.
+2022-11-02 09:12:49.365  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:12:49.433  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:12:49.434  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:12:49.457  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:12:49.527 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:12:49.550 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:12:49.563 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:12:49.572 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:12:49.632  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f1dc1110-6e9e-4307-a1c1-3428fba12589
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:12:49.649  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a7b729c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61cdc358, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ef35d77, org.springframework.security.web.header.HeaderWriterFilter@791c4827, org.springframework.security.web.csrf.CsrfFilter@66878731, org.springframework.security.web.authentication.logout.LogoutFilter@1534fb3b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@39cfb0e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6682bd25, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@56d10e4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2d05aa21, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@260e3a69, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d4803ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b9e6ca, org.springframework.security.web.session.SessionManagementFilter@6417e0cb, org.springframework.security.web.access.ExceptionTranslationFilter@410b2dc5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19b4573c]
+2022-11-02 09:12:49.669  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:12:49.684  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:12:49.690  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.206 seconds (JVM running for 13920.592)
+2022-11-02 09:12:49.692  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:15:15.564  WARN 38183 --- [HikariPool-35 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-35 - Retrograde clock change detected (housekeeper delta=26s78ms), soft-evicting connections from pool.
+2022-11-02 09:16:23.263  WARN 38183 --- [HikariPool-35 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-35 - Thread starvation or clock leap detected (housekeeper delta=1m7s700ms).
+2022-11-02 09:16:50.853  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:16:50.863  INFO 38183 --- [Thread-139] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:16:50.888  INFO 38183 --- [Thread-139] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:16:50.889  INFO 38183 --- [Thread-139] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown initiated...
+2022-11-02 09:16:50.894  INFO 38183 --- [Thread-139] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown completed.
+2022-11-02 09:16:51.273  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:16:51.273  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:16:51.627  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:16:51.628  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:16:51.802  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:16:51.803  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:16:51.803  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:16:51.818  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:16:51.818  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 539 ms
+2022-11-02 09:16:51.869  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:16:51.876  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Starting...
+2022-11-02 09:16:51.881  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Start completed.
+2022-11-02 09:16:51.882  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:16:51.933  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:16:51.933  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:16:51.964  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:16:52.034 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:16:52.053 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:16:52.074 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:16:52.091 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:16:52.184  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 875c300e-9abf-49d6-be7c-94cdbde4fe8b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:16:52.219  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ef236e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7df4bdce, org.springframework.security.web.context.SecurityContextPersistenceFilter@48924e0b, org.springframework.security.web.header.HeaderWriterFilter@2d13f48f, org.springframework.security.web.csrf.CsrfFilter@6b4812c8, org.springframework.security.web.authentication.logout.LogoutFilter@6b34b135, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1abe502c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4b934cce, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@15a3bd6c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ee23b45, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@245bc7d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@165ef85e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2aa4948e, org.springframework.security.web.session.SessionManagementFilter@63e7deed, org.springframework.security.web.access.ExceptionTranslationFilter@3f0a75ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5974c207]
+2022-11-02 09:16:52.252  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:16:52.280  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:16:52.295  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.095 seconds (JVM running for 14129.43)
+2022-11-02 09:16:52.298  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:17:08.808  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:17:08.822  INFO 38183 --- [Thread-143] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:17:08.833  INFO 38183 --- [Thread-143] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:17:08.834  INFO 38183 --- [Thread-143] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Shutdown initiated...
+2022-11-02 09:17:08.839  INFO 38183 --- [Thread-143] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Shutdown completed.
+2022-11-02 09:17:09.017  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:17:09.018  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:17:09.282  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:17:09.283  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:17:09.517  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:17:09.519  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:17:09.519  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:17:09.538  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:17:09.538  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 516 ms
+2022-11-02 09:17:09.594  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:17:09.599  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Starting...
+2022-11-02 09:17:09.602  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Start completed.
+2022-11-02 09:17:09.603  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:17:09.621  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:17:09.621  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:17:09.653  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:17:09.722 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:17:09.743 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:17:09.760 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:17:09.774 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:17:09.841  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bf7507ce-3a10-4a8a-b4e9-33c40c10842b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:17:09.861  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@aa9bdc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c099a4b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b52a44, org.springframework.security.web.header.HeaderWriterFilter@576741b7, org.springframework.security.web.csrf.CsrfFilter@33717a6e, org.springframework.security.web.authentication.logout.LogoutFilter@2dd2293, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1058b04e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2b35fe1f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@49868344, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64cffb00, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3704ac9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ef7d9e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@520a668f, org.springframework.security.web.session.SessionManagementFilter@39af9515, org.springframework.security.web.access.ExceptionTranslationFilter@78ff471c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e4e5e3c]
+2022-11-02 09:17:09.880  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:17:09.894  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:17:09.902  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.913 seconds (JVM running for 14147.037)
+2022-11-02 09:17:09.905  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:17:16.349  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:17:16.354  INFO 38183 --- [Thread-147] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:17:16.387  INFO 38183 --- [Thread-147] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:17:16.389  INFO 38183 --- [Thread-147] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Shutdown initiated...
+2022-11-02 09:17:16.399  INFO 38183 --- [Thread-147] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Shutdown completed.
+2022-11-02 09:17:16.525  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:17:16.529  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:17:16.882  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:17:16.883  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:17:17.060  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:17:17.061  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:17:17.061  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:17:17.075  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:17:17.075  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 542 ms
+2022-11-02 09:17:17.137  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:17:17.143  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Starting...
+2022-11-02 09:17:17.189  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Start completed.
+2022-11-02 09:17:17.190  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:17:17.204  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:17:17.204  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:17:17.231  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:17:17.302 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:17:17.326 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:17:17.339 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:17:17.354 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:17:17.396  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5c68001b-7f18-409e-8e5f-2d855ade020f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:17:17.412  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24c9919, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a1c40a4, org.springframework.security.web.context.SecurityContextPersistenceFilter@35b1f913, org.springframework.security.web.header.HeaderWriterFilter@3cd1835, org.springframework.security.web.csrf.CsrfFilter@33e405dd, org.springframework.security.web.authentication.logout.LogoutFilter@49cd2c1e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3ded8171, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@d67bdad, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1b2ba69f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1972157, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65f0910, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6db8a55e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@238eb134, org.springframework.security.web.session.SessionManagementFilter@2668daee, org.springframework.security.web.access.ExceptionTranslationFilter@19855b1e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@635579a5]
+2022-11-02 09:17:17.431  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:17:17.450  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:17:17.457  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.958 seconds (JVM running for 14154.591)
+2022-11-02 09:17:17.460  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:19:45.068  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2022-11-02 09:19:45.073  INFO 38183 --- [Thread-151] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:19:45.096  INFO 38183 --- [Thread-151] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:19:45.097  INFO 38183 --- [Thread-151] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Shutdown initiated...
+2022-11-02 09:19:45.102  INFO 38183 --- [Thread-151] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Shutdown completed.
+2022-11-02 09:19:45.426  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:19:45.427  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:19:45.722  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:19:45.723  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:19:45.851  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:19:45.852  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:19:45.852  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:19:45.865  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:19:45.865  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 435 ms
+2022-11-02 09:19:45.912  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:19:45.917  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Starting...
+2022-11-02 09:19:45.921  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Start completed.
+2022-11-02 09:19:45.922  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:19:45.984  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:19:45.985  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:19:46.014  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:19:46.064 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:19:46.080 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:19:46.089 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:19:46.100 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:19:46.152  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 918a5c2d-4514-4161-88ea-52f763dff40b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:19:46.170  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48e2291b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62efc84b, org.springframework.security.web.context.SecurityContextPersistenceFilter@35c310a6, org.springframework.security.web.header.HeaderWriterFilter@1c88dc93, org.springframework.security.web.csrf.CsrfFilter@3d7a8629, org.springframework.security.web.authentication.logout.LogoutFilter@4a011ef6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@334e110d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6fc7d63, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@21ea7b62, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2cfb735, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c8daf49, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56bb960f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e630675, org.springframework.security.web.session.SessionManagementFilter@5ce18edd, org.springframework.security.web.access.ExceptionTranslationFilter@25c39689, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@749bd783]
+2022-11-02 09:19:46.193  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:19:46.213  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:19:46.228  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.035 seconds (JVM running for 14303.359)
+2022-11-02 09:19:46.234  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:24:01.659  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-11-02 09:24:01.666  INFO 38183 --- [Thread-155] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:24:01.677  INFO 38183 --- [Thread-155] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:24:01.678  INFO 38183 --- [Thread-155] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Shutdown initiated...
+2022-11-02 09:24:01.685  INFO 38183 --- [Thread-155] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Shutdown completed.
+2022-11-02 09:24:02.031  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:24:02.032  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:24:02.420  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:24:02.421  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:24:02.573  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:24:02.574  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:24:02.574  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:24:02.593  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:24:02.593  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 559 ms
+2022-11-02 09:24:02.647  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:24:02.658  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Starting...
+2022-11-02 09:24:02.671  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Start completed.
+2022-11-02 09:24:02.672  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:24:02.739  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:24:02.740  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:24:02.811  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:24:02.882 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:24:02.902 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:24:02.914 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:24:02.937 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:24:03.008  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a548b1d6-4d83-4337-90eb-32f581448d92
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:24:03.031  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14253076, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30238ec8, org.springframework.security.web.context.SecurityContextPersistenceFilter@fe0b329, org.springframework.security.web.header.HeaderWriterFilter@6bff7f6e, org.springframework.security.web.csrf.CsrfFilter@1f52c2, org.springframework.security.web.authentication.logout.LogoutFilter@52a6214e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3f2f77d7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@761dc08e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7476d6d4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2cc2721e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@844c458, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18d0de31, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b9b18c6, org.springframework.security.web.session.SessionManagementFilter@7593661b, org.springframework.security.web.access.ExceptionTranslationFilter@6b8d95d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39d3ae34]
+2022-11-02 09:24:03.062  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:24:03.101  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:24:03.110  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 1.285 seconds (JVM running for 14560.234)
+2022-11-02 09:24:03.112  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 09:24:29.703  INFO 38183 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 09:24:29.711  INFO 38183 --- [Thread-159] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 09:24:29.726  INFO 38183 --- [Thread-159] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:24:29.727  INFO 38183 --- [Thread-159] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Shutdown initiated...
+2022-11-02 09:24:29.729  INFO 38183 --- [Thread-159] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Shutdown completed.
+2022-11-02 09:24:29.880  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Starting OjtMovieApplication using Java 11.0.16 on Wins-MacBook-Air.local with PID 38183 (/Users/winmon/eclipse-bsCamp-spring/OjtMovie/bin/main started by winmon in /Users/winmon/eclipse-bsCamp-spring/OjtMovie)
+2022-11-02 09:24:29.881  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 09:24:30.043  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 09:24:30.044  INFO 38183 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-11-02 09:24:30.223  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 09:24:30.224  INFO 38183 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 09:24:30.224  INFO 38183 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 09:24:30.245  INFO 38183 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 09:24:30.245  INFO 38183 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 358 ms
+2022-11-02 09:24:30.293  INFO 38183 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 09:24:30.299  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Starting...
+2022-11-02 09:24:30.307  INFO 38183 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Start completed.
+2022-11-02 09:24:30.307  INFO 38183 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-11-02 09:24:30.324  INFO 38183 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 09:24:30.325  INFO 38183 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 09:24:30.348  WARN 38183 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 09:24:30.390 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-02 09:24:30.404 DEBUG 38183 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2022-11-02 09:24:30.415 DEBUG 38183 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-02 09:24:30.432 DEBUG 38183 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-02 09:24:30.472  WARN 38183 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7a806450-a8d4-4d8a-a745-c7a80fce9123
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-11-02 09:24:30.491  INFO 38183 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a2b7c8c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7181bb3a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d15b4bf, org.springframework.security.web.header.HeaderWriterFilter@68886e10, org.springframework.security.web.csrf.CsrfFilter@535aeab, org.springframework.security.web.authentication.logout.LogoutFilter@5e2b2b6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@b5e3e8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6f99abd, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5e04bc41, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5ad2168b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20286012, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b7b62e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14289f44, org.springframework.security.web.session.SessionManagementFilter@657d1e4d, org.springframework.security.web.access.ExceptionTranslationFilter@d3c0d92, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@226f33c0]
+2022-11-02 09:24:30.508  INFO 38183 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 09:24:30.522  INFO 38183 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 09:24:30.532  INFO 38183 --- [restartedMain] com.ojt.bs.OjtMovieApplication           : Started OjtMovieApplication in 0.689 seconds (JVM running for 14587.656)
+2022-11-02 09:24:30.536  INFO 38183 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
